@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Recommendations Table</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="table-wrapper">
+    {% for table in tables %}
+        {{ table|safe }}
+    {% endfor %}
+</div>
+{% endblock %}

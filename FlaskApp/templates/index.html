@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Job Recommendation</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+
+{% block body %}
+<div class="main-block">
+    <h1>Order Form</h1>
+    <form action="/" method="POST">
+        <h3>Delivery Method</h3>
+        <div class="method">
+            <div> 
+                <input type="radio" value="none" id="radioOne" name="method" checked/>
+                <label for="radioOne" class="radio">Manual Input</label>
+            </div>
+            <div>
+                <input type="radio" value="none" id="radioTwo" name="method" />
+                <label for="radioTwo" class="radio">Try LinkedIn Profile</label>
+            </div>
+        </div>
+        <br><br>
+        <div class="info">
+            <input class="fname" type="text" name="skill_1" placeholder="Skill 1">
+            <input class="fname" type="text" name="skill_2" placeholder="Skill 2">
+            <input class="fname" type="text" name="skill_3" placeholder="Skill 3">
+            <input class="fname" type="text" name="skill_4" placeholder="Skill 4">
+        </div>
+        <button href="/" class="button">Submit</button>
+    </form>
+</div>
+{% endblock %}
