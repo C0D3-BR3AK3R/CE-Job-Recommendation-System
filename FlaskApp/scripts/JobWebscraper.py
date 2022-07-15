@@ -63,6 +63,7 @@ class JobScraper:
             'more_info':more_info_lst
         }
         
+        
         data_df = pd.DataFrame(data_dict)
         print(data_df.head())
         data_df.to_csv('FlaskApp\data\jobs_data.csv', index=False)
